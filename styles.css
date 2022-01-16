@@ -152,8 +152,14 @@ body {
     color: hsl(178, 100%, 50%);
 }
 
+@media (max-width: 1366px) {
+    html {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 400px) {
     html {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
