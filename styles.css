@@ -1,0 +1,159 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(216, 50%, 16%);
+    padding: 1.4rem;
+    width: 21rem;
+    border-radius: 10px;
+    box-shadow: 0px 1rem 1rem 1rem hsl(217, 54%, 8%), 0px 1rem 1rem 2rem hsl(217, 54%, 10%);
+    cursor: pointer;
+}
+
+.nft-image-container {
+    position: relative;
+    display: flex;
+    width: 100%;    
+}
+
+.nft-image {
+    width: 100%;   
+    height: auto;
+    border-radius: 10px;    
+}
+
+.nft-image-hover {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 247, 0.5);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s;
+}
+
+.card-container:hover .nft-image-hover {
+    opacity: 1;
+}
+
+.card-container h2 {
+    font-size: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    margin: 1rem 0;
+    transition: .5s;
+}
+
+.card-container:hover h2 {
+    color: hsl(178, 100%, 50%);
+}
+
+.card-container p {
+    font-size: 1rem;
+    color: hsl(215, 51%, 70%)
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.price-container span {
+    display: flex;
+    align-items: center;
+}
+
+.price-container img {
+    margin-right: .5rem;
+}
+
+.price {
+    font-size: 1rem;
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.date {
+    font-size: 1rem;
+    color: hsl(215, 51%, 70%);    
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid hsl(215, 32%, 27%);
+    padding: 1rem 0;
+}
+
+.avatar {
+    width: 2rem;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+.author {
+    font-size: 1rem;
+    color: hsl(215, 51%, 70%); 
+}
+
+.author a {
+    color: hsl(0, 0%, 100%);
+    transition: .5s;
+}
+
+.card-container:hover .author a {
+    color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin: .5rem 0;
+}
+
+.attribution p {
+    color: hsl(215, 51%, 70%);
+    font-size: .8rem;
+}
+
+.attribution a {
+    color: hsl(0, 0%, 100%);
+    transition: .5s;
+}
+
+.attribution a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 15px;
+    }
+}
